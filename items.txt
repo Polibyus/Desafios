@@ -1,0 +1,17 @@
+[
+	{
+		"title": "regla",
+		"price": 28,
+		"id": 2
+	},
+	{
+		"title": "regla",
+		"price": 28,
+		"id": 54
+	},
+	{
+		"title": "regla",
+		"price": 28,
+		"id": 107
+	}
+]
