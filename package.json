@@ -1,0 +1,22 @@
+{
+  "name": "desafios",
+  "version": "1.0.0",
+  "description": "Estos son los desafios del curso Back-End",
+  "main": "Clase4.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Polibyus/Desafios.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Polibyus/Desafios/issues"
+  },
+  "homepage": "https://github.com/Polibyus/Desafios#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
