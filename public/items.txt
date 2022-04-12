@@ -23,5 +23,15 @@
 		"title": "regla",
 		"price": 28,
 		"id": 215
+	},
+	{
+		"title": "hola",
+		"price": "22",
+		"id": 5
+	},
+	{
+		"title": "hola",
+		"price": "22",
+		"id": 6
 	}
 ]
