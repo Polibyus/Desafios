@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    
+    <span></span>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+   
+   <script>
+        
+        let templateUnrendered = '<h1>Datos Personales</h1><ul>';
+          
+        templateUnrendered += '<li>{{nombre}}</li>';
+        templateUnrendered += '<li>{{apellido}}</li>';
+        templateUnrendered += '<li>{{edad}}</li>';
+        templateUnrendered += '<li>{{email}}</li>';
+        templateUnrendered += '<li>{{telefono}}</li>';
+
+        templateUnrendered += '</ul>';
+
+        const template = Handlebars.compile(templateUnrendered);
+
+        const html = template({
+                nombre: 'Juan',
+                apellido: 'Pedraza',
+                edad: '23',
+                email: 'juanchifpedraza@hotmail.com',
+                telefono: '01157064082',
+        });
+        document.querySelector('span').innerHTML = html;
+    </script>
+</body>
+</html>
