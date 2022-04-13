@@ -1,0 +1,12 @@
+[
+	{
+		"title": "regla",
+		"price": 28,
+		"id": 2
+	},
+	{
+		"title": "holanda",
+		"price": "200",
+		"id": 54
+	}
+]
