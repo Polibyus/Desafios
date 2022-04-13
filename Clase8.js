@@ -29,7 +29,7 @@ class Contenedor {
       const data = await fs.promises.readFile('items.txt', 'utf-8');
       const json = JSON.parse(data.toString("utf-8"));
       let title = req.query.title;
-      let price = req.query.price;
+      let price = parseInt(req.query.price, 10);
       const obj = { title: title, price: price, id: data.length };
       json.push(obj);
       console.log(`El id del producto es ${data.length}`);
@@ -59,7 +59,6 @@ class Contenedor {
   async getAll(req, res) {
     try {
       const data = await fs.promises.readFile('items.txt', 'utf-8');
-      console.log(this.archivo);
       return res.send(data);
     }
     catch (err) {

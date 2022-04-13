@@ -8,5 +8,15 @@
 		"title": "holanda",
 		"price": "200",
 		"id": 54
+	},
+	{
+		"title": "producto",
+		"price": "98",
+		"id": 112
+	},
+	{
+		"title": "producto",
+		"price": 98,
+		"id": 289
 	}
 ]
