@@ -1,0 +1,15 @@
+html(lang='es')
+    head
+        title='Formulario de carga'
+    body
+        h1='Bienvenido a Shop of Roll'
+        div
+            h2='Ingresar nuevo producto'
+            form(action='/form' method='post')
+                input(type='text' placeholder='Nombre del producto' name="title" required)
+                input(type='number' placeholder='Precio $' name="price" required)
+                input(type="submit", value='Agregar producto')
+            if success
+                h2=mensaje
+        a(href='/productos') Ver listado 
+            
