@@ -10,7 +10,7 @@ const PORT = 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.set('views','./views');
+app.set('views', './views');
 app.set('view engine', 'pug');
 
 app.use('/productos', productos);
@@ -56,7 +56,7 @@ class Contenedor {
   async getAll(req, res) {
     try {
       const data = await fs.promises.readFile('items.txt', 'utf-8');
-      return res.render('productos.pug', { products: JSON.parse(data.toString("utf-8"))});
+      return res.render('productos.pug', { products: JSON.parse(data.toString("utf-8")) });
     }
     catch (err) {
       console.log(`Hubo un error = ${err} `);
@@ -107,7 +107,7 @@ const items = new Contenedor('items.txt');
 productos.get('/', items.getAll);
 productos.get('/:id', items.getById);
 form.post('/', items.save);
-form.get('/', (req,res) => {
+form.get('/', (req, res) => {
   res.render('index.pug')
 })
 productos.delete('/:id', items.deleteById);

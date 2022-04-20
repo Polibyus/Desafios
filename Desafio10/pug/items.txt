@@ -1,47 +1,7 @@
 [
 	{
-		"title": "regla",
-		"price": 28,
+		"title": "adsf",
+		"price": 546,
 		"id": 2
-	},
-	{
-		"title": "holanda",
-		"price": "200",
-		"id": 54
-	},
-	{
-		"title": "producto",
-		"price": "98",
-		"id": 112
-	},
-	{
-		"title": "producto",
-		"price": 98,
-		"id": 289
-	},
-	{
-		"title": "Dale bokaa",
-		"price": 98,
-		"id": 228
-	},
-	{
-		"title": "prueba 423545",
-		"price": 5151,
-		"id": 287
-	},
-	{
-		"title": "hola",
-		"price": 87,
-		"id": 351
-	},
-	{
-		"title": "dale",
-		"price": 56,
-		"id": 404
-	},
-	{
-		"title": "ahora si",
-		"price": 8546,
-		"id": 457
 	}
 ]
