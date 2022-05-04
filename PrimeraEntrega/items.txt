@@ -1,7 +1,42 @@
 [
 	{
-		"title": "adsf",
-		"price": 546,
-		"id": 2
+		"id": 0,
+		"time": "Tue May 03 2022 21:13:50 GMT-0300 (hora estándar de Argentina)",
+		"title": "Estefunca",
+		"desc": "claroquevaafuncionar",
+		"code": "69",
+		"pic": "https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Monster-256.png",
+		"price": 69,
+		"stock": "99"
+	},
+	{
+		"id": 1,
+		"time": "Tue May 03 2022 21:41:50 GMT-0300 (hora estándar de Argentina)",
+		"title": "quizasnoo",
+		"desc": "claroquevaafuncionar",
+		"code": 69,
+		"pic": "https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Monster-256.png",
+		"price": 69,
+		"stock": 99
+	},
+	{
+		"id": 2,
+		"time": "Tue May 03 2022 21:41:57 GMT-0300 (hora estándar de Argentina)",
+		"title": "quizasnoo",
+		"desc": "claroquevaafuncionar",
+		"code": 69,
+		"pic": "https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Monster-256.png",
+		"price": 69,
+		"stock": 99
+	},
+	{
+		"id": 4,
+		"time": "Tue May 03 2022 21:41:58 GMT-0300 (hora estándar de Argentina)",
+		"title": "quizasnoo",
+		"desc": "claroquevaafuncionar",
+		"code": 69,
+		"pic": "https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Monster-256.png",
+		"price": 69,
+		"stock": 99
 	}
 ]
