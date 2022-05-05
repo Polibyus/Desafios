@@ -1,0 +1,13 @@
+{
+	"id": 1651707499984,
+	"time": "Wed May 04 2022 20:38:19 GMT-0300 (hora estándar de Argentina)",
+	"products": [
+		{
+			"id": "12",
+			"title": "boka",
+			"desc": "elmasgrande",
+			"price": 464,
+			"stock": 16
+		}
+	]
+}

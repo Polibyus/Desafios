@@ -1,4 +1,0 @@
-{
-	"id": 1651697198330,
-	"time": "Wed May 04 2022 17:46:38 GMT-0300 (hora estándar de Argentina)"
-}
