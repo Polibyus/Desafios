@@ -126,16 +126,19 @@ const items = new Productos('items.txt');
 // Probados con front end y funciona la vista de productos en listado, en detalle
 products.get('/', items.showAll.bind(items));
 products.get('/:id', items.showItems.bind(items));
+// La vista principal es el formulario de cargar de productos
 form.get('/', (req, res) => {
 
     res.render('form.pug')
 
 })
-
+// Con el form del front end se cargan los items en el archivo txt
 form.post('/form', items.save.bind(items));
+// Probados con Thunderclient tanto delete como put
 products.delete('/:id', items.deleteById.bind(items));
 products.put('/:id', items.updateById.bind(items));
 
+// La clase carrito 
 class Carrito {
     constructor() { }
     async crearCart(req, res) {
@@ -226,7 +229,9 @@ class Carrito {
     }
 }
 
+
 const cart = new Carrito();
+
 
 carrito.post('/', cart.crearCart);
 carrito.delete('/:id', cart.deleteCartId);

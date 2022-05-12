@@ -7,7 +7,7 @@ const app = express();
 const productos = Router();
 const httpServer = new HttpServer(app)
 const io = new IOServer(httpServer)
-const PORT = 8080;
+const PORT = 3000;
 
 //express
 app.use(express.json());
@@ -78,7 +78,7 @@ productos.get('/',(req,res)=>{
 
 httpServer.listen(PORT, err => {
   if (err) throw new Error(`error en el sv ${err}`)
-  console.log(`el sv escuchar en ${PORT} en http://localhost:8080/products`);
+  console.log(`el sv escuchar en ${PORT} en http://localhost:3000/products`);
 })
 
 
