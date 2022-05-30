@@ -2,9 +2,14 @@ const express = require('express');
 const { Router } = express;
 const productos = Router();
 
-const { ProductosDaoArchivo } = require('../daos/productos/productosDaoArchivo');
+// const { ProductosDaoArchivo } = require('../daos/productos/productosDaoArchivo');
+// const productosDao = new ProductosDaoArchivo();
 
-const productosDao = new ProductosDaoArchivo();
+// const { ProductosDaoMongo } = require('../daos/productos/productosDaoMongo')
+// const productosDao = new ProductosDaoMongo();
+
+const { ProductosDaoFirestore } = require('../daos/productos/productosDaoFirebase')
+const productosDao = new ProductosDaoFirestore();
 
 productos.get('/', async (req, res) => {
     let productos = await productosDao.getAll();
@@ -17,15 +22,7 @@ productos.get('/:id', async (req, res) => {
 })
 
 productos.post('/', async (req, res) => {
-    let time = Date(Date.now());
-    let title = req.body.title;
-    let desc = req.body.desc;
-    let code = parseInt(req.body.code, 10);
-    let pic = req.body.pic;
-    let price = parseInt(req.body.price, 10);
-    let stock = parseInt(req.body.stock, 10);
-    const obj = { id: data.length, time: time.toString(), title: title, desc: desc, code: code, pic: pic, price: price, stock: stock };
-    await productosDao.save(obj);
+    await productosDao.save(req.query);
     res.json({result: 'Producto Guardado'})
 })
 
