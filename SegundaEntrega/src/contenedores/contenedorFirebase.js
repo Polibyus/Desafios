@@ -1,16 +1,10 @@
-let admin = require('firebase-admin');
+let admin = require("firebase-admin");
 
-const firebaseConfig = {
-  apiKey: "AIzaSyC5alOpNcsZ9qxmu5kTrUwsr08qjcmb5Bc",
-  authDomain: "shop-of-roll.firebaseapp.com",
-  projectId: "shop-of-roll",
-  storageBucket: "shop-of-roll.appspot.com",
-  messagingSenderId: "470904819706",
-  appId: "1:470904819706:web:2398fa79c4b66ebabede43",
-  measurementId: "G-BLED7EHRP3"
-};
+let serviceAccount = require('../../db/ecommerce-57266-firebase-adminsdk-2hhgl-c391669b21.json');
 
-admin.initializeApp(firebaseConfig);
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
 
 const db = admin.firestore()
 
@@ -35,7 +29,7 @@ class ContainerFirestore {np
       return result
     }
   
-    async getById(id){
+    async getByID(id){
       let result = await this.collection.get()
       result = result.docs.map(doc => ({ 
         id: doc.id,
@@ -45,17 +39,18 @@ class ContainerFirestore {np
       return item
     }
   
-    async delete(id){
+    async deleteById(id){
       let doc = this.collection.doc(`${id}`)
       let item = doc.delete()
       return ({ status: 'Deleted' })
     }
-  
+    
     async update(content, id){
       let doc = this.collection.doc(`${id}`)
       let item = await doc.update(content)
       return item
     }
+  
   }
   
   module.exports = { ContainerFirestore }

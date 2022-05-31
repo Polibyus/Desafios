@@ -15,6 +15,20 @@ class ContainerMongo {
     return await this.model.find()
   }
 
+  async save(obj){
+    const productoSaveModel = new this.model(obj)
+    let productoSave = await productoSaveModel.save();
+  }
+  
+  async getByID(id){
+    return await this.model.find({'id': id})
+  }
+
+  async deleteById(id) {
+    return await this.model.deleteOne({'id': id})
+  }
+
+
 }
 
 module.exports = ContainerMongo;

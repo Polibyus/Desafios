@@ -17,9 +17,9 @@ class ProductosDaoFirestore extends ContainerFirestore {
   save(obj){
     if(obj){
       console.log(obj)
-      this.saveProducto(user, this.id)
+      this.saveProducto(obj, this.id)
       this.id++
-      return user
+      return obj
     } else {
       return 'Not saved'
     }

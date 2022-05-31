@@ -1,0 +1,15 @@
+{
+	"id": 1653957232300,
+	"time": "Mon May 30 2022 21:33:52 GMT-0300 (hora estándar de Argentina)",
+	"productos": [
+		{
+			"time": "Mon May 30 2022 21:34:53 GMT-0300 (hora estándar de Argentina)",
+			"title": "ideal",
+			"desc": "funciono",
+			"code": 4964,
+			"pic": "cualquiera",
+			"price": 987,
+			"stock": 9
+		}
+	]
+}

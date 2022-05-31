@@ -8,8 +8,8 @@ const productos = Router();
 // const { ProductosDaoMongo } = require('../daos/productos/productosDaoMongo')
 // const productosDao = new ProductosDaoMongo();
 
-const { ProductosDaoFirestore } = require('../daos/productos/productosDaoFirebase')
-const productosDao = new ProductosDaoFirestore();
+// const { ProductosDaoFirestore } = require('../daos/productos/productosDaoFirebase')
+// const productosDao = new ProductosDaoFirestore();
 
 productos.get('/', async (req, res) => {
     let productos = await productosDao.getAll();
