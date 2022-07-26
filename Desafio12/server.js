@@ -1,7 +1,6 @@
-const express = require('express');
 const { Server: HttpServer } = require('http')
 const { Server: IOServer } = require('socket.io')
-const fs = require("fs");
+const express = require('express');
 const { Router } = express;
 const app = express();
 const productos = Router();
@@ -71,53 +70,10 @@ io.on('connection',socket => {
 });
 
 productos.get('/',(req,res)=>{
-
   res.render('index.pug')
-
 })
 
 httpServer.listen(PORT, err => {
   if (err) throw new Error(`error en el sv ${err}`)
   console.log(`el sv escuchar en ${PORT} en http://localhost:3000/products`);
 })
-
-
-
-// // clase con los metodos
-// class Contenedor {
-//   constructor(txt) {
-//     this.archivo = txt;
-//   }
-//   // guardar nuevo objeto
-//   async save(req, res) {
-//     try {
-//       const data = await fs.promises.readFile('items.txt', 'utf-8');
-//       const json = JSON.parse(data.toString("utf-8"));
-//       let title = req.body.title;
-//       let price = parseInt(req.body.price, 10);
-//       let pic = req.body.pic;
-//       const obj = { title: title, price: price, pic: pic, id: data.length };
-//       json.push(obj);
-//       await fs.promises.writeFile('items.txt', JSON.stringify(json, null, "\t"));
-//       return res.render('index.pug', {
-//         success: true,
-//         message: `El id del producto es ${data.length}`
-//       });
-//     }
-//     catch (err) {
-//       console.log(`Hubo un error = ${err} `);
-//     }
-//   }
-//   // mostrar todos los productos
-//   async getAll(req, res) {
-//     try {
-//       const data = await fs.promises.readFile('items.txt', 'utf-8');
-//       return res.render('index.pug', { products: JSON.parse(data.toString("utf-8")) });
-//     }
-//     catch (err) {
-//       console.log(`Hubo un error = ${err} `);
-//     }
-//   }
-// }
-
-

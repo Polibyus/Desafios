@@ -3,35 +3,12 @@ html(lang='es')
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title='Formulario de carga'
+        title='Chat'
         link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
         link(rel="stylesheet", href="style.css")
     body
         div(class='d-flex align-items-center flex-column')
             h1(class="text-center my-4")='Bienvenido a Shop of Roll'
-            div(class='card mb-4' style="width: 50%;")
-                div(class='card-body')
-                    h2(class='card-title')='Ingresar nuevo producto'
-                    form(onsubmit='addItem(this)')
-                        div(class="mb-3")
-                            label(for="" class="form-label")='Nombre del producto'
-                            input(type='text' class="form-control" id="title" aria-describedby="Producto" required)
-                        div(class="mb-3")
-                            label(for="" class="form-label")='Precio en u$d'
-                            input(type='number' class="form-control" id="price" aria-describedby="Precio" required)
-                        div(class="mb-3")
-                            label(for="" class="form-label")='Link a la imagen'
-                            input(type='text' class="form-control" id="pic" aria-describedby="Imagen")
-                        button(type="submit" class="btn btn-primary")='Subir'
-            h1(class="text-center")='Listado de productos'
-            table(class='table table-dark table-hover' style="width: 50%;")
-                thead(align="center")
-                    tr
-                        th='ID'
-                        th='Nombre'
-                        th='Precio'
-                        th='Imagen'
-                tbody(id='products' align="center")
         hr
         div(class="container")
             div(id="messages" class="panel-body")
@@ -42,9 +19,11 @@ html(lang='es')
                     input(class="form-control input-sm" type="text" id="texto" placeholder="Cuéntanos algo...")
                     span(class="input-group-btn")
                         button(class="btn btn-warning btn-sm" type="submit")='Enviar'
+        hr
+        a(class="btn btn-warning btn-sm" href="http://localhost:3000/api/productos")='Productos'
+        a(class="btn btn-warning btn-sm" href="http://localhost:3000")='Inicio'
 
     script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous")
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous")
     script(src="/socket.io/socket.io.js")
-    script(src="main.js") 
-            
+    script(src="main.js")

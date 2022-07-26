@@ -1,5 +1,5 @@
 {
-  "name": "desafio12",
+  "name": "desafio22",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -13,8 +13,10 @@
   "dependencies": {
     "express": "^4.18.1",
     "express-router": "^0.0.1",
+    "faker": "^5.5.3",
     "fs": "^0.0.1-security",
     "http-server": "^14.1.1",
+    "normalizr": "^3.6.2",
     "pug": "^3.0.2",
     "socket.io": "^4.5.1"
   }
