@@ -40,7 +40,7 @@ app.get('/index', (req, res) => {
         req.session.admin = true;
         req.session.logged = true;
     } else {
-        res.render('login.pug', { mensaje: 'Usuario o contraseña erroneos' })
+        res.render('login.pug', { error: true })
     }
     res.render('index.pug', { username: req.session.user })
 })
