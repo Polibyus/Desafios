@@ -9,8 +9,8 @@ function getRoot(req, res) {
 
 function getLogin(req, res) {
     if (req.isAuthenticated()) {
-        let user = req.user;
-        res.redirect('index.pug' + user )
+        let user = req.user.username;
+        res.render('index.pug', { user: user })
     } else {
         res.render('login.pug');
     }
@@ -22,18 +22,19 @@ function getSignup(req, res) {
 
 function postLogin (req, res) {
     if (req.isAuthenticated()) {
-        res.redirect('index.pug')
+        let user = req.user.username;
+        res.render('index.pug', { user: user })
     } else {
-        res.redirect('login.pug')
+        res.redirect('login')
     }
 }
 
 function postSignup (req, res) {
     if (req.isAuthenticated()) {
-        let user = req.user;
-        res.redirect('index.pug' + user )
+        let user = req.user.username;
+        res.render('index.pug', { user: user })
     } else {
-        res.redirect('login.pug')
+        res.redirect('login')
     }
 }
 
@@ -68,7 +69,7 @@ function checkAuthentication(req, res, next) {
     if (req.isAuthenticated()) {
         next();
     } else {
-        res.redirect("login.pug");
+        res.redirect("login");
     }
 }
 

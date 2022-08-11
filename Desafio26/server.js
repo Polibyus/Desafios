@@ -3,6 +3,7 @@ const session = require('express-session')
 const routes = require('./src/routes/routes')
 const UserModel = require('./src/models/usuarios');
 const MongoStore = require('connect-mongo')
+const { MONGO_URI } = require('./src/config/globals');
 
 const { TIEMPO_EXPIRACION } = require('./src/config/globals')
 const {validatePass} = require('./src/utils/passValidator');
@@ -17,6 +18,10 @@ const PORT = 3000;
 const app = express()
 
 app.use(session({
+    store: MongoStore.create({
+        mongoUrl: MONGO_URI,
+        mongoOptions: advancedOptions
+    }),
     secret: 'JuanchiFP',
     cookie: {
         httpOnly: false,
